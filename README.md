@@ -1,12 +1,61 @@
-# React + Vite
+# User Management Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React-based dashboard that displays user data fetched from the JSONPlaceholder API. The application is styled with Bootstrap 5 and uses React Icons for visual enhancements.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **API Integration:** Retrieves users from [JSONPlaceholder](https://jsonplaceholder.typicode.com/users).
+- **User Search:** Filter users by name or email.
+- **Pagination:** View users across pages.
+- **Responsive Design:** Built with Bootstrap 5 for a mobile-friendly interface.
+- **Clean Code:** Uses ESLint for maintaining code quality.
 
-## Expanding the ESLint configuration
+## API Integration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The application fetches user data from the following endpoint:
+- **GET** [https://jsonplaceholder.typicode.com/users](https://jsonplaceholder.typicode.com/users)
+
+The fetched data is filtered based on search criteria and paginated on the dashboard.
+
+## Features
+
+- **API Integration:** Fetches user data from [JSONPlaceholder](https://jsonplaceholder.typicode.com/users).
+- **User Cards:** Displays user details such as name, username, email, phone, and website in a card layout.
+- **Search:** Quickly filter users by name or email.
+- **Pagination:** Navigate through users with simple pagination controls.
+- **Responsive Design:** Mobile-friendly layout using Bootstrap 5.
+- **Modern React:** Built with functional components and hooks.
+
+---
+
+## Project Structure
+
+```
+.
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package.json
+├── README.md
+├── vite.config.js
+├── public/
+└── src/
+    ├── App.jsx
+    ├── main.jsx
+    └── components/
+        ├── Dashboard.jsx
+        └── UserCard.jsx
+
+- **`src/main.jsx`**: Application entry point.
+- **`src/App.jsx`**: Loads the Dashboard.
+- **`src/components/Dashboard.jsx`**: Main component that handles user fetching, search, and pagination. See [`Dashboard`](src/components/Dashboard.jsx).
+- **`src/components/UserCard.jsx`**: Renders individual user details. See [`UserCard`](src/components/UserCard.jsx).
+
+```
+## Dependencies
+
+- [React](https://react.dev/) & [React DOM](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [React Icons](https://react-icons.github.io/react-icons/)
+- [Bootstrap 5](https://getbootstrap.com/)
+
